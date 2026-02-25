@@ -8,8 +8,8 @@ st.set_page_config(
     layout= "wide",
 )
 
-df = pd.read_csv("https://raw.githubusercontent.com/vqrca/dashboard_salarios_dados/refs/heads/main/dados-imersao-final.csv")
-
+from utils.tratamento import carregar_dados
+df = carregar_dados("data/salaries.csv")
 
 with st.sidebar:
     with st.sidebar.expander("🔍 Filtros", expanded=False):
